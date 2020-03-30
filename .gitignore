@@ -21,3 +21,4 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+mvn archetype:generate -DgroupId=com.kildeen -DartifactId=textgame -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
