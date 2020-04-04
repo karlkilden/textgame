@@ -5,7 +5,7 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 
-class UndertowServerTest {
+class UnderTowServerTest {
 
     /**
      * Undertow.java has a lot of final unmockable classes and unreachable state. So we will just do a basic sanity test.
@@ -14,7 +14,7 @@ class UndertowServerTest {
     @Test
     void startServer() {
         Undertow.Builder builder = Undertow.builder();
-        UndertowServer UnderTowServer = new UndertowServer();
+        UnderTowServer UnderTowServer = new UnderTowServer();
        Undertow tow =  UnderTowServer.startServer(builder);
 
         Assertions.assertThat(tow.getListenerInfo().get(0).getProtcol()).isEqualToIgnoringCase(Undertow.ListenerType.HTTP.toString());
