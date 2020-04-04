@@ -11,7 +11,7 @@ import io.undertow.websockets.spi.WebSocketHttpExchange;
 
 import static io.undertow.Handlers.*;
 
-public class UnderTowServer {
+public class UndertowServer {
 
     public Undertow startServer(Undertow.Builder undertowBuilder) {
         Undertow server = undertowBuilder
@@ -35,7 +35,7 @@ public class UnderTowServer {
                             }
 
                         }))
-                        .addPrefixPath("/", resource(new ClassPathResourceManager(UnderTowServer.class.getClassLoader(), UnderTowServer.class.getPackage()))
+                        .addPrefixPath("/", resource(new ClassPathResourceManager(UndertowServer.class.getClassLoader(), UndertowServer.class.getPackage()))
                                 .addWelcomeFiles("index.html")))
                 .build();
 

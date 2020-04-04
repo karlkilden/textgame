@@ -14,7 +14,7 @@ class UnderTowServerTest {
     @Test
     void startServer() {
         Undertow.Builder builder = Undertow.builder();
-        UnderTowServer UnderTowServer = new UnderTowServer();
+        UndertowServer UnderTowServer = new UndertowServer();
        Undertow tow =  UnderTowServer.startServer(builder);
 
         Assertions.assertThat(tow.getListenerInfo().get(0).getProtcol()).isEqualToIgnoringCase(Undertow.ListenerType.HTTP.toString());
