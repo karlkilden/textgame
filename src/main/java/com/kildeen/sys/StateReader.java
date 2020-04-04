@@ -5,17 +5,14 @@ import org.hjson.JsonValue;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class ConfigReader {
+public class StateReader {
 
     private final FileReader fr;
 
-    public ConfigReader(FileReader fr) {
+    public StateReader(FileReader fr) {
         this.fr = fr;
     }
 
-    public List<String> read(String path) {
-        return fr.getLines(path);
-    }
 
     public String path(String test) {
         return null;
