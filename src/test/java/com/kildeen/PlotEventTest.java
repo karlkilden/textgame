@@ -8,6 +8,10 @@ import org.hjson.JsonValue;
 import org.hjson.Stringify;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 
 
@@ -56,5 +60,14 @@ class PlotEventTest {
         }
 
 
+    }
+
+    @Test
+    void writeAsHtml() throws IOException {
+        Path path = Paths.get("src/test/resources/readable.html");
+        String str = "<meta http-equiv=\"refresh\" content=\"200\"/>\n"+"<h2>Hello, World!!!!";
+        byte[] strToBytes = str.getBytes();
+
+        Files.write(path, strToBytes);
     }
 }
