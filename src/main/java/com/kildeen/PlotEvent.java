@@ -1,5 +1,8 @@
 package com.kildeen;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.util.List;
 
 
@@ -50,5 +53,15 @@ public class PlotEvent {
 
     public void setOptions(List<String> options) {
         this.options = options;
+    }
+
+    @Override
+    public String toString() {
+        ObjectMapper m = new ObjectMapper();
+        try {
+            return m.writeValueAsString(this);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

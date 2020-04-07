@@ -48,7 +48,6 @@ class PlotEventTest {
 
         try {
             List<PlotEvent> myObjects = mapper.readValue(JsonValue.readHjson(hjsonString).toString(), new TypeReference<List<PlotEvent>>(){});
-            System.out.println(hjsonString);
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);
         }

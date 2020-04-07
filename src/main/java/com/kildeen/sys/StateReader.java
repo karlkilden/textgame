@@ -19,7 +19,7 @@ public class StateReader {
     }
 
     public JsonValue readAsHjson(String path) {
-        String fileContents = fr.getLines(path).stream().collect(Collectors.joining());
+        String fileContents = fr.getLines(path).stream().collect(Collectors.joining(System.lineSeparator()));
         return JsonValue.readHjson(fileContents);
     }
 }

@@ -1,5 +1,6 @@
 package com.kildeen.sys;
 
+import com.kildeen.Story;
 import io.undertow.Undertow;
 import io.undertow.server.handlers.resource.ClassPathResourceManager;
 import io.undertow.websockets.WebSocketConnectionCallback;
@@ -13,7 +14,7 @@ import static io.undertow.Handlers.*;
 
 public class UndertowServer {
 
-    public Undertow startServer(Undertow.Builder undertowBuilder) {
+    public Undertow startServer(Undertow.Builder undertowBuilder, Story story) {
         Undertow server = undertowBuilder
                 .addHttpListener(8080, "localhost")
                 .setHandler(path()
@@ -21,6 +22,9 @@ public class UndertowServer {
 
                             @Override
                             public void onConnect(WebSocketHttpExchange exchange, WebSocketChannel channel) {
+                                for (WebSocketChannel session : channel.getPeerConnections()) {
+                                    WebSockets.sendText(story.getPlotEvents().get(0).toString(), session, null);
+                                }
                                 channel.getReceiveSetter().set(new AbstractReceiveListener() {
 
                                     @Override

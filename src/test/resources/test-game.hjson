@@ -1,0 +1,27 @@
+[
+  {
+    eventName: Select your character
+    eventId: "1"
+    eventText: Select your character. Chooce wisely, this choice is final.
+    asOptionText: Go to select Character
+    options:
+    [
+      "2"
+      "3"
+    ]
+  }
+  {
+    eventName: You have selected - Warrior!
+    eventId: "2"
+    eventText: Any good warrior needs a weapon of choice
+    asOptionText: Warrior
+    options: null
+  }
+  {
+    eventName: You have selected - Wizard!
+    eventId: "3"
+    eventText: Any good wizard needs to select it's flair of magic
+    asOptionText: Wizard
+    options: null
+  }
+]
