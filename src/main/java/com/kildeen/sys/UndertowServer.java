@@ -23,15 +23,16 @@ public class UndertowServer {
                             @Override
                             public void onConnect(WebSocketHttpExchange exchange, WebSocketChannel channel) {
                                 for (WebSocketChannel session : channel.getPeerConnections()) {
-                                    WebSockets.sendText(story.getPlotEvents().get(0).toString(), session, null);
+                                    WebSockets.sendText(story.getWebWrappingPlotEvents().get(0).toString(), session, null);
                                 }
                                 channel.getReceiveSetter().set(new AbstractReceiveListener() {
 
                                     @Override
                                     protected void onFullTextMessage(WebSocketChannel channel, BufferedTextMessage message) {
                                         final String messageData = message.getData();
+
                                         for (WebSocketChannel session : channel.getPeerConnections()) {
-                                            WebSockets.sendText(messageData, session, null);
+                                            WebSockets.sendText(story.getPlotEvent(messageData).toString(), session, null);
                                         }
                                     }
                                 });
