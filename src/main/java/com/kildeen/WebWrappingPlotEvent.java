@@ -2,6 +2,7 @@ package com.kildeen;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -18,12 +19,11 @@ public class WebWrappingPlotEvent {
         this.childOptionsToChildOptionText = new HashMap<>();
         if (this.plotEvent.getOptions() != null)
         for (String option : this.plotEvent.getOptions()) {
+            if (option == null || option.isBlank() )    {
+                continue;
+            }
             this.childOptionsToChildOptionText.put(option, optionsToOptionsTexts.get(option));
         }
-    }
-
-    public WebWrappingPlotEvent(){
-
     }
 
     @Override
