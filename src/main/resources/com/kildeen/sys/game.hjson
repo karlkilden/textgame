@@ -6,20 +6,118 @@
     asOptionText: Go to select Character
     options:
     [
-      "2"
-      "3"
+      "1000"
+      "2000"
     ]
   }
   {
     eventName: You have selected - Warrior!
-    eventId: "2"
-    eventText: Any good warrior needs a weapon of choice
+    eventId: "1000"
+    eventText: Any good warrior needs a combat style
     asOptionText: Warrior
-    options: null
+    options:
+    [
+      "1000-1"
+      "1000-2"
+    ]
   }
+
+    {
+      eventName: Long range specialist
+      eventId: "1000-1"
+      eventText: '''You will start out armed with a crossbow and 5 bolts. Bolts may break during usage or be retrieved again if it survived the impact.
+      You also have 2 health potions. You have room for many more weapons and other pieces of equipment in your inventory, best of luck!'''
+      asOptionText: Long Range mission start
+      options:
+      [
+        "1000-1-1"
+        "1000-1-2"
+      ]
+    }
+
+    {
+      eventName: A journey through the north
+      eventId: "1000-1-1"
+      eventText: Not much is know about the North beyond the mapped out forests and swamps that eventually ends in the large wasteland. Many have gone but few has returned with their sanity intact. However there is supposed to be a woman close by who went as a small child with her parents. Perhaps she could be worth visiting.
+      asOptionText: Go north - wastelands and desolation awaits.
+      options:
+      [
+        "1000-1-1-1"
+        "1000-1-1-2"
+        "1000-1"
+      ]
+    }
+
+    {
+      eventName: The child that went North
+      eventId: "1000-1-1-1"
+      eventText: The woman in question is nowhere to be found and here supposed home is razed some time ago. The charred remains of her supposed house looked either sunked in or was crumbling from exposure.
+      asOptionText: Find the woman
+      options:
+      [
+
+      ]
+    }
+
+    {
+      eventName: Make haste, time is precious and tales from others can be deceiving
+      eventId: "1000-1-1-2"
+      eventText: As far as he could see, nothing was there but charred old trees, dried out swamps. In close range it was no challenge to find bones. Mostly from animals, but from humans too.
+      asOptionText: Stop nowhere, Go North.
+      options:
+      [
+
+      ]
+    }
+    {
+      eventName: Melee fighter
+      eventId: "1000-2"
+      eventText: '''You will start out armed with a heavy spear and a dagger.
+      You also have 2 health potions. You have room for many more weapons and other pieces of equipment in your inventory, best of luck!'''
+      asOptionText: Melee fighter mission start
+      options:
+      [
+        "1000-2-1"
+        "1000-2-2"
+      ]
+    }
+    {
+      eventName: A journey through the north
+      eventId: "1000-2-1"
+      eventText: Not much is know about the North beyond the mapped out forests and swamps that eventually ends in the large wasteland. Many have gone but few has returned with their sanity intact. However there is supposed to be a woman close by who went as a small child with her parents. Perhaps she could be worth visiting.
+      asOptionText: Go north - wastelands and desolation awaits.
+      options:
+      [
+        "1000-2-1-1"
+        "1000-2-1-2"
+        "1000-2"
+      ]
+    }
+
+    {
+      eventName: The child that went North
+      eventId: "1000-2-1-1"
+      eventText: The woman in question is nowhere to be found and here supposed home is razed some time ago. The charred remains of her supposed house looked either sunked in or was crumbling from exposure.
+      asOptionText: Find the woman
+      options:
+      [
+
+      ]
+    }
+
+    {
+      eventName: Make haste, time is precious and tales from others can be deceiving
+      eventId: "1000-2-1-2"
+      eventText: As far as he could see, nothing was there but charred old trees, dried out swamps. In close range it was no challenge to find bones. Mostly from animals, but from humans too.
+      asOptionText: Stop nowhere, Go North.
+      options:
+      [
+
+      ]
+    }
   {
     eventName: You have selected - Wizard!
-    eventId: "3"
+    eventId: "2000"
     eventText: Any good wizard needs to select it's flair of magic
     asOptionText: Wizard
     options: null
