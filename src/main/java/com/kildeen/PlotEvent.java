@@ -12,6 +12,7 @@ public class PlotEvent {
     private String eventText;
     private String asOptionText;
 
+
     private List<String> options;
 
     public String getAsOptionText() {
