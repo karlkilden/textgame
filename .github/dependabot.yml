@@ -1,0 +1,31 @@
+version: 2
+updates:
+- package-ecosystem: maven
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: io.undertow:undertow-websockets-jsr
+    versions:
+    - 2.2.3.Final
+    - 2.2.4.Final
+    - 2.2.5.Final
+  - dependency-name: io.undertow:undertow-servlet
+    versions:
+    - 2.2.3.Final
+    - 2.2.4.Final
+    - 2.2.5.Final
+  - dependency-name: org.mockito:mockito-core
+    versions:
+    - 3.7.7
+    - 3.8.0
+  - dependency-name: org.junit.jupiter:junit-jupiter-api
+    versions:
+    - 5.7.0
+  - dependency-name: org.junit.jupiter:junit-jupiter-engine
+    versions:
+    - 5.7.0
+  - dependency-name: io.undertow:undertow-core
+    versions:
+    - 2.2.3.Final
